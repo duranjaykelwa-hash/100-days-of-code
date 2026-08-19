@@ -1,17 +1,15 @@
 #include <stdio.h>
-int main() 
+int main()
 {
-int num;
-printf("Enter an integer: ");
-scanf("%d", &num);
-if (num >= 0) 
-{
-if (num == 0)
-printf("Zero");
-else printf("Positive");
-}
- else 
-{
-printf("Negative");
-}
+int year;
+printf("Enter a year: ");
+scanf("%d", &year);
+if (year % 400 == 0)
+printf("%d is a leap year.", year);
+else if (year % 100 == 0)
+printf("%d is not a leap year.", year);
+else if (year % 4 == 0)
+printf("%d is a leap year.", year);
+else
+printf("%d is not a leap year.", year);
 }
